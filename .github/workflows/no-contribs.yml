@@ -1,13 +1,22 @@
-name: Close Pull Request
+name: 'No Contributions'
 
 on:
+  issues:
+    types: opened
   pull_request_target:
-    types: [opened, reopened]
+    types: opened
+  schedule:
+    - cron: '0 * * * *'
+
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
-  run:
+  action:
     runs-on: ubuntu-latest
     steps:
-    - uses: superbrothers/close-pull-request@v3
-      with:
-        comment: "Thank you for sharing this contribution, but since this repository is a read-only mirror, it does not accept code contributions. This pull request will be closed."
+      - uses: dessant/repo-lockdown@v4
+        with:
+          github-token: ${{ github.token }}
+          pr-comment: "Thank you for sharing this contribution, but since this repository is a read-only mirror, it does not accept code contributions. This pull request will be closed."
