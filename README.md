@@ -1,6 +1,7 @@
 # LibOpen
 A mirror of Studio Elttob's in-house open source packages for Roblox development.
 **Please note that this repository is a read-only mirror, and does not accept code contributions.**
+This is a test of pull request rejection.
 
 ## Dependencies
 
