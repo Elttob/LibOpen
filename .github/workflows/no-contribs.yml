@@ -1,0 +1,13 @@
+name: Reject Contributions
+
+on: pull_request_target
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: crondaemon/close-pr@v1
+      with:
+        comment: "Thank you for sharing this contribution, but since this repository is a read-only mirror, it does not accept code contributions. This pull request will be closed."
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
