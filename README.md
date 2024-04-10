@@ -2,6 +2,10 @@
 A mirror of Studio Elttob's in-house open source packages for Roblox development.
 **Please note that this repository is a read-only mirror, and does not accept code contributions.**
 
+## Dependencies
+
+LibOpen is designed to have no external dependencies. Packages in LibOpen may depend on each other; they should be placed as siblings in the data model.
+
 ## Licence
 Each package is annotated with its licence. If not otherwise specified, the MIT licence applies.
 
